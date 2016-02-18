@@ -33,10 +33,5 @@ public class TorchController : Signal
     {
         Status = isLitOnStart;
     }
-
-    void OnValidate()
-    {
-        Status = isLitOnStart;
-    }
     #endregion
 }
