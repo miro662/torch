@@ -11,9 +11,10 @@ GameObject:
   - 212: {fileID: 21259196}
   - 95: {fileID: 9556202}
   - 114: {fileID: 11431482}
+  - 61: {fileID: 6148514}
   m_Layer: 0
   m_Name: LitTorch
-  m_TagString: Untagged
+  m_TagString: Torch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 107880}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: -3, z: 0}
+  m_LocalPosition: {x: 5, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 467544}
@@ -59,6 +60,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 431914}
   m_RootOrder: 0
+--- !u!61 &6148514
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107880}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.5, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.6, y: 1}
 --- !u!95 &9556202
 Animator:
   serializedVersion: 3
@@ -145,7 +160,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1160566875
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 0efd8a4853b29e04f92e6766ca09e5c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
