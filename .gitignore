@@ -26,4 +26,5 @@ ExportedObj/
 sysinfo.txt
 
 # Dev files
-/Assets/Torch/_dev/
+/Assets/\_dev*
+_dev.meta
