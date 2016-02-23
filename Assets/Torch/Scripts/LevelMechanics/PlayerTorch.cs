@@ -1,11 +1,26 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
+[RequireComponent(typeof(Animator))]
 public class PlayerTorch : MonoBehaviour
 {
     //Is player torch currently lit?
-    public bool isLit;
-    bool IsLit { get; set; }
+    bool isLit;
+    bool IsLit
+    {
+        get { return isLit; }
+
+        set
+        {
+            isLit = value;
+            GetComponent<Animator>().SetBool("Lit", value);
+        }
+    }
+
+    void Awake()
+    {
+        IsLit = false;
+    }
 
     //Current torch
     TorchController torch;
