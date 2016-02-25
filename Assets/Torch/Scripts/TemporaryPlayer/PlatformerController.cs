@@ -43,4 +43,9 @@ public class PlatformerController : MonoBehaviour
                 _platformerMotor.velocity += gravity;
             }
     }
+
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.tag == "Lethal") Torch.GameController.Die();
+    }
 }

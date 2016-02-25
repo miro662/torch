@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Główny komponent, odpowiada za kontrolę nad grą
@@ -29,6 +30,10 @@ public class GameController : MonoBehaviour
         {
             GetComponent<SaveController>().Restore();
         }
+        if (Input.GetKeyDown(KeyCode.F11))
+        {
+            Reinit();
+        }
     }
 
     public void RegisterSavePoint(SavePoint savePoint)
@@ -38,5 +43,17 @@ public class GameController : MonoBehaviour
         lastSavePoint = savePoint;
         PlayerPrefs.SetString("SaveData", GetComponent<SaveController>().GetJSON());
         PlayerPrefs.Save();
+    }
+
+    void Reinit()
+    {
+        PlayerPrefs.DeleteKey("SaveData");
+        PlayerPrefs.Save();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void Die()
+    {
+        GetComponent<SaveController>().Restore();
     }
 }

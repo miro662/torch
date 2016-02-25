@@ -4,7 +4,6 @@ using System.Collections;
 [RequireComponent(typeof(Animator))]
 public class SavePoint : MonoBehaviour {
     public Vector3 spawnOffset;
-    bool wasActive = false;
     Animator _animator;
 
     void Awake()
@@ -19,12 +18,11 @@ public class SavePoint : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D coll)
     {
-        if (coll.tag == "Player" && !wasActive)
+        if (coll.tag == "Player")
         {
             //Activate save point
             Torch.GameController.RegisterSavePoint(this);
             _animator.SetBool("Lit", true);
-            wasActive = true;
         }
     }
 }
