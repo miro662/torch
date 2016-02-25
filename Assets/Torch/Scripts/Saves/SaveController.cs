@@ -36,6 +36,37 @@ public class SaveController : MonoBehaviour
         Restore();
     }
 
+    void FillTorchData()
+    {
+        //Get all torches
+        GameObject[] torches = GameObject.FindGameObjectsWithTag("Torch");
+        data.torchData = new List<SaveData.TorchData>();
+        foreach (GameObject torch in torches)
+        {
+            TorchController torchController = torch.GetComponent<TorchController>();
+            SaveData.TorchData torchData = new SaveData.TorchData(torch.name, torchController.Status);
+            if (!data.torchData.Contains(torchData))
+                data.torchData.Add(torchData);
+            else
+            {
+                data.torchData.Find(x => x.name == torchData.name).status = torchController.Status;
+            }
+        }
+    }
+
+    void RestoreTorchData()
+    {
+        foreach (SaveData.TorchData torch in data.torchData)
+        {
+            GameObject torchGameObject = GameObject.Find(torch.name);
+            if (torchGameObject != null)
+            {
+                TorchController torchController = torchGameObject.GetComponent<TorchController>();
+                torchController.Status = torch.status;
+            }
+        }
+    }
+
     //Aktualizuje dane
     public void UpdateData(SavePoint pSavePoint)
     {
@@ -48,6 +79,8 @@ public class SaveController : MonoBehaviour
 
         //Ustaw stan świeczki gracza
         data.playerTorchStatus = currentPlayerTorch.GetComponent<PlayerTorch>().IsLit;
+
+        FillTorchData();
     }
 
     //Restartuje dane w poziomie
@@ -61,5 +94,17 @@ public class SaveController : MonoBehaviour
         currentPlayer.transform.position = savePoint.transform.position + savePoint.spawnOffset;
         //Przywróć stan świeczki gracza
         currentPlayerTorch.GetComponent<PlayerTorch>().IsLit = data.playerTorchStatus;
+        RestoreTorchData();
+    }
+
+    public void RestoreJSON(string json)
+    {
+        data = JsonUtility.FromJson<SaveData>(json);
+        Restore();
+    }
+
+    public string GetJSON()
+    {
+        return JsonUtility.ToJson(data);
     }
 }

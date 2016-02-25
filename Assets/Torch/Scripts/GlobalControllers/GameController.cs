@@ -9,7 +9,18 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
-        GetComponent<SaveController>().NewGame();
+        //Search for playerpref SaveData
+        if (!PlayerPrefs.HasKey("SaveData"))
+        {
+            print("New Game");
+            GetComponent<SaveController>().NewGame();
+        }
+        else
+        {
+            print("Saved Game");
+            string saveData = PlayerPrefs.GetString("SaveData");
+            GetComponent<SaveController>().RestoreJSON(saveData);
+        }
     }
 
     void Update()
@@ -25,5 +36,7 @@ public class GameController : MonoBehaviour
         if (lastSavePoint != null && lastSavePoint != savePoint) lastSavePoint.Deactivate();
         GetComponent<SaveController>().UpdateData(savePoint);
         lastSavePoint = savePoint;
+        PlayerPrefs.SetString("SaveData", GetComponent<SaveController>().GetJSON());
+        PlayerPrefs.Save();
     }
 }
