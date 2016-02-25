@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 457316}
   - 114: {fileID: 11474260}
   - 114: {fileID: 11489452}
+  - 114: {fileID: 11419416}
   m_Layer: 0
   m_Name: Game Controller
   m_TagString: GameController
@@ -29,6 +30,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &11419416
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 127938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95b286cb1aa9db64983cb00aad2f5d5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+    levelName: 
+    controlPointName: 
+    playerTorchStatus: 0
+  startSavePoint: {fileID: 0}
 --- !u!114 &11474260
 MonoBehaviour:
   m_ObjectHideFlags: 1

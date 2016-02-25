@@ -6,7 +6,7 @@ public class PlayerTorch : MonoBehaviour
 {
     //Is player torch currently lit?
     bool isLit;
-    bool IsLit
+    public bool IsLit
     {
         get { return isLit; }
 

@@ -8,11 +8,11 @@ public class Torch
     /// <summary>
     /// Znajduje obiekt Game Controller i zwraca odpowiednią klasę
     /// </summary>
-    public GameController GameController
+    public static GameController GameController
     {
         get
         {
-            GameObject gameControllerGameObject = GameObject.FindGameObjectWithTag("Game Controller");
+            GameObject gameControllerGameObject = GameObject.FindGameObjectWithTag("GameController");
             GameController gameController = gameControllerGameObject.GetComponent<GameController>();
             return gameController;
         }
