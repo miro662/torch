@@ -29,6 +29,7 @@ public class PlayerTorch : MonoBehaviour
         //Check if entered torch
         if (collider.tag == "Torch")
         {
+            print("entered torch");
             //Set current torch
             torch = collider.GetComponent<TorchController>();
         }

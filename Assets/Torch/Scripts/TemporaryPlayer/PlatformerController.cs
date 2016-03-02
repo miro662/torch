@@ -1,13 +1,17 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(PlatformerMotor))]
+[RequireComponent(typeof(Animator))]
 public class PlatformerController : MonoBehaviour
 {
+    Animator animator;
+
     //Komponenty
     PlatformerMotor _platformerMotor;
     void Awake()
     {
         _platformerMotor = GetComponent<PlatformerMotor>();
+        animator = GetComponent<Animator>();
     }
 
     //Parametry
@@ -35,6 +39,7 @@ public class PlatformerController : MonoBehaviour
             if (jump)
             {
                 jump = false;
+            animator.SetTrigger("Jump");
                 _platformerMotor.velocity += jumpForce;
             }
             else
@@ -42,6 +47,12 @@ public class PlatformerController : MonoBehaviour
                 //Dodaj grawitację
                 _platformerMotor.velocity += gravity;
             }
+    }
+
+    void Update()
+    {
+        animator.SetFloat("Horizontal Velocity", Mathf.Abs(_platformerMotor.velocity.x));
+        animator.SetFloat("Vertical Velocity", _platformerMotor.velocity.y);
     }
 
     void OnTriggerEnter2D(Collider2D collider)

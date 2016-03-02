@@ -22,7 +22,7 @@ public class SaveController : MonoBehaviour
         //Znajdź gracza w poziomie
         currentPlayer = GameObject.FindGameObjectWithTag("Player");
         //Znajdź pochodnię gracza
-        currentPlayerTorch = currentPlayer.transform.FindChild("PlayerTorch");
+        currentPlayerTorch = GameObject.FindGameObjectWithTag("PlayerTorch2").transform;
     }
 
     //Funkcja "nowej gry"
@@ -78,6 +78,7 @@ public class SaveController : MonoBehaviour
         data.levelName = SceneManager.GetActiveScene().name;
 
         //Ustaw stan świeczki gracza
+        print(currentPlayerTorch.name);
         data.playerTorchStatus = currentPlayerTorch.GetComponent<PlayerTorch>().IsLit;
 
         FillTorchData();

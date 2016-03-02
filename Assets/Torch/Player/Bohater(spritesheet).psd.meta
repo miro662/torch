@@ -1,0 +1,153 @@
+fileFormatVersion: 2
+guid: 88c5af0c5780a4b4493103a37185e80a
+timeCreated: 1456085714
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Reka
+    21300002: P Udo
+    21300004: P Stopa
+    21300006: L Udo
+    21300008: "Cia\u0142o"
+    21300010: Pochodnia
+    21300012: L Stopa
+    21300014: "G\u0142owa"
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 32
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Reka
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 27
+        width: 12
+        height: 12
+      alignment: 9
+      pivot: {x: 0.07915815, y: 0.97163326}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: P Udo
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 11
+        width: 6
+        height: 14
+      alignment: 9
+      pivot: {x: 0.49854788, y: 0.83034337}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: P Stopa
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 0
+        width: 9
+        height: 13
+      alignment: 9
+      pivot: {x: 0.40177578, y: 0.9611209}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: L Udo
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 11
+        width: 6
+        height: 14
+      alignment: 9
+      pivot: {x: 0.4449819, y: 0.8108775}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: "Cia\u0142o"
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 22
+        width: 9
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Pochodnia
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 19
+        width: 9
+        height: 34
+      alignment: 9
+      pivot: {x: 0.35488212, y: 0.27464047}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: L Stopa
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 0
+        width: 9
+        height: 13
+      alignment: 9
+      pivot: {x: 0.42434692, y: 0.9755402}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: "G\u0142owa"
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 43
+        width: 30
+        height: 19
+      alignment: 9
+      pivot: {x: 0.48548838, y: 0.023402566}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
