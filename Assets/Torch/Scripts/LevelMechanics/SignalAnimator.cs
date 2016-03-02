@@ -50,10 +50,9 @@ public class SignalAnimator : MonoBehaviour
     void Awake()
     {
         _animator = GetComponent<Animator>();
-        InitializeSlots();
     }
-    
-    void OnValidate()
+
+    void Start()
     {
         InitializeSlots();
     }
